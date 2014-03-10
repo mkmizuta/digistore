@@ -1,0 +1,15 @@
+<h1>
+  {{ name }} 
+  <small class='muted'>({{ price }})</small>
+</h1>
+
+<div class='row'>
+  <div class='col-lg-8'>
+    <img {{ bind-attr src=avatar }} class='thumbnail col-lg-12' />
+  </div>
+  <div class='col-lg-4'>
+    {{ name }}<br>
+    ${{ price }} each<br>
+    {{ description }}
+  </div>
+</div>
