@@ -1,0 +1,31 @@
+<h3>Checkout</h3>
+<br>
+  Please submit the following information to complete your purchase:<br>
+  <p>
+  <div class='form-group'>
+    <label for="name">Name:</label>
+    {{input type='text' value=name class='form-control'}}
+  </div>
+  <div class='form-group'>
+    <label for="email">Email:</label>
+    {{input type='text' value=email class='form-control'}}
+  </div>
+  <div class='form-group'>
+    <label for="cc">Credit Card Number:</label>
+    {{input type='text' value=cc class='form-control'}}
+  </div>
+  <div class='form-group'>
+    <label for="cvv">CVV:</label>
+    {{input type='text' value=cvv class='form-control'}}
+  </div>
+  <div class='form-group'>
+    <label for="expiration">Expiration Date:</label>
+    {{input type='text' value=expiration class='form-control'}}
+  </div>
+  <div class='form-group'>
+    <label for="zipcode">Zipcode:</label>
+    {{input type='text' value=zipcode class='form-control'}}
+  </div>
+  
+  <button class='btn btn-success'{{action "confirmation" this}}>Purchase</button>
+</p>

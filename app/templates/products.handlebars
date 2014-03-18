@@ -9,8 +9,9 @@
           <img {{ bind-attr src=avatar }} class='thumbnail col-lg-12' /> 
             {{ name }}
           {{/ link-to }}
+          ${{ format-price price }}
         </li>
-          ${{ price }}
+
       {{/ each }}
     </ul>
   </div>
