@@ -1,5 +1,4 @@
 App.Order = DS.Model.extend({
-  user: DS.belongsTo("user"),
   paid: DS.attr("boolean"),
   canceled: DS.attr("boolean"),
   checkout: DS.belongsTo("checkout")

@@ -1,7 +1,11 @@
 <h3>Checkout</h3>
 <br>
-  Please submit the following information to complete your purchase:<br>
-  <p>
+  Please submit the following information to complete your purchase:<br><br>
+
+  <div class='form-group'>
+    <label for="recipient">Recipient's Email:</label>
+    {{input type='text' value=recipient class='form-control'}}
+  </div>
   <div class='form-group'>
     <label for="name">Name:</label>
     {{input type='text' value=name class='form-control'}}
@@ -28,4 +32,3 @@
   </div>
   
   <button class='btn btn-success'{{action "confirmation" this}}>Purchase</button>
-</p>

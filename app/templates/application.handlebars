@@ -1,18 +1,26 @@
 <div class='container'>
-  <h1>Digistore digital dancing</h1>
-  <p class='lead'>The place to go for all things digital.
+  <div class='row'>
+    <div class="col-md-9">
+      {{# link-to "home" }}<h1>Bouquet It and Be Done</h1>{{/ link-to }}
+      <p class='lead'>The place to go for e-bouquets and buds.
+    </div>
+    <div class="col-md-1">
+      {{# link-to "products" }}
+        <h4>Products</h4>
+      {{/ link-to }}
+    </div>
+    <div class="col-md-2">
 
-  
-    {{# link-to "cart"}}
-     <h4 class="text-right">View Cart | <span class="glyphicon glyphicon-shopping-cart"></span></h4>
-    {{/ link-to }}
- 
- </p>
-  
-  
-  <hr>
-  {{outlet}}
-  
-  <div class='text-muted'><small>Foot</small></div>
+      {{# link-to "cart" }}
+       <h4>View Cart | <span class="glyphicon glyphicon-shopping-cart"></span></h4>
+      {{/ link-to }}
+      </p>
+
+    </div>
+  </div>
+    <hr>
+    {{outlet}}
+    
+    <div class='text-muted'><small>Foot</small></div>
 </div>
 
