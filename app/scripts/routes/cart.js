@@ -1,16 +1,18 @@
 App.CartRoute = Ember.Route.extend({
   actions: {
     more: function (item) {
-      var cart = this.modelFor("application")
-      item.incrementProperty("quantity");
-      item.set("cart", cart);
-      item.save();
+      this.controllerFor("application").get("cart").then( function (cart) {
+        item.incrementProperty("quantity");
+        item.set("cart", cart);
+        item.save();
+      })
     },
     less: function (item) {
-      var cart = this.modelFor("application")
+      this.controllerFor("application").get("cart").then( function (cart) {
       if (item.get("quantity") > 1) {
         item.decrementProperty("quantity");
         item.set("cart", cart);
+        item.save()
       }
       else {
         item.deleteRecord()
@@ -18,10 +20,11 @@ App.CartRoute = Ember.Route.extend({
         cart.get("items").then( function(items) {
           items.removeObject(item);
         });
-      }
+      };
+    });
     },
     removeFromCart: function (item) {
-      cart = this.modelFor("application")
+      cart = this.controllerFor("application")
       cart.get("items").then( function(items) {
         items.removeObject(item);
       });
@@ -30,6 +33,6 @@ App.CartRoute = Ember.Route.extend({
       }
     },
   model: function (params) {
-    return this.modelFor("application")
+    return this.controllerFor("application").get("cart")
   }
 });

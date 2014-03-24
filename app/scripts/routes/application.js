@@ -9,7 +9,6 @@ App.ApplicationRoute = Ember.Route.extend({
       return cartObject;
      });
     } else {
-    
       return this.store.find("cart", localStorage.cartId);  //this line runs show api
     }
   }

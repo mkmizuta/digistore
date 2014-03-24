@@ -1,8 +1,8 @@
 App.CheckoutRoute = Ember.Route.extend({
   actions:
-  { confirmation: function (user)
-    {user.save();
-      this.transitionTo("confirmation", user)
+  { confirmation: function (order)
+    {order.save();
+      this.transitionTo("confirmation", order)
     }
   },
   model: function (params) {
